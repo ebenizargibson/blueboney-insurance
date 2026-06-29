@@ -235,7 +235,7 @@ export default function ClaimDetailPage() {
                           {formatDate(ev.occurred_at as string)}
                           {ev.actor_name ? ` by ${ev.actor_name}` : ''}
                         </p>
-                        {ev.notes && (
+                        {(ev.notes as string | undefined) && (
                           <p className="text-xs text-gray-600 mt-0.5">
                             {String(ev.notes)}
                           </p>

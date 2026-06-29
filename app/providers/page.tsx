@@ -62,7 +62,7 @@ export default function ProvidersPage() {
           <p className="font-medium text-gray-900">
             {String(row.legal_name ?? '—')}
           </p>
-          {row.doing_business_as && (
+          {(row.doing_business_as as string | undefined) && (
             <p className="text-xs text-gray-400">
               dba {String(row.doing_business_as)}
             </p>
